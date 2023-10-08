@@ -62,6 +62,97 @@ public class Jugador {
     
   }
   
+  public boolean equals(Jugador jugador2, int mode) {
+    
+    switch (mode) {
+    
+      case 1: 
+        
+        if (jugador2.getNombre() == this.nombre) {
+        
+          return true;    
+        
+        } else {
+        
+          return false;
+        
+        }
+      case 2:
+        if (jugador2.getCorreo() == this.correo) {
+        
+          return true;    
+        
+        } else {
+        
+          return false;
+        
+        }
+      case 3:  
+        if (jugador2.getCedula() == this.cedula) {
+        
+          return true;    
+        
+        } else {
+        
+          return false;
+        
+        }        
+          
+      case 4:
+        for (int i = 0; i < cartonesAsignados.size(); i++) {
+        
+          Carton unCarton = (Carton) cartonesAsignados.get(i);
+          
+          
+        
+        }
+          
+        if (jugador2.getNombre() == this.nombre) {
+        
+          return true;    
+        
+        } else {
+        
+          return false;
+        
+        }
+      /**    
+      case 5:
+          
+        if (jugador2.getNombre() == this.nombre) {
+        
+          return true;    
+        
+        } else {
+        
+          return false;
+        
+        }
+          
+      case 6:    
+
+        if (jugador2.getNombre() == this.nombre) {
+        
+          return true;    
+        
+        } else {
+        
+          return false;
+        
+        }
+      
+    
+      
+      */
+     
+      default:
+        return false;
+    }
+    
+  }
+  
+  
+  
   
   public String toString() {
     
@@ -74,7 +165,9 @@ public class Jugador {
   msg += "Cedula: " + cedula + "\n";
   
   for (int i = 0; i < cartonesAsignados.size(); i++) {
-    
+     Carton unCarton = (Carton) cartonesAsignados.get(i);
+     
+     //msg += unCarton.toString();
     
     }
   
