@@ -187,7 +187,23 @@ public class Carton {
   }
   
   
-  
+  public String toString() {
+    String msg = "";
+    for (List<Integer> unaLista : getValores()) {
+      for (Integer num : unaLista) {
+        
+        msg += num + "\t";
+        //msg += "\t";
+
+      }
+      msg += "\n";
+    }
+    msg += "Identificador:" + getIdentificador() + "\n";
+    return msg;
+    
+
+
+  }
 
   
 }
